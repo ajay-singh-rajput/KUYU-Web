@@ -1,0 +1,372 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    /* font-family: 'Nova Oval', cursive; */
+    font-family: 'MuseoModerno';
+    
+}
+
+.intro-div{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: intro 1s linear 1 forwards;
+    /* display: none; */
+}
+.intro{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@keyframes intro {
+
+    0%{
+        height: 100%;
+    }
+    99%{
+        height: 100%;
+    }
+    100%{
+        height: 0%;
+    }
+}
+
+
+
+/* _________ Nav start _____________ */
+
+
+nav{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    padding-top: 2vmax;
+    color: #0701EB;
+    position: fixed;
+    top: 0;
+    z-index: 900;
+}
+
+.logo, .logo-inner{
+    width: 45px;
+    height: 45px;
+    background: url(logo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all linear 0.25s;
+}
+.menu, .menu-inner{
+    width: 100px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: #0701EB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all linear 0.25s;
+}
+.up-hover:hover{
+    transform: translateY(-7px);
+}
+.navname{
+    font-weight: 900;
+    font-size: 18px;
+    -webkit-text-stroke: 0.2px white;
+}
+
+
+/* _________ Nav end _____________ */
+/* _________ Page 1 start _____________ */
+
+.page1{
+    width: 100%;
+    height: 90%;
+    padding: 0 4vw;
+    padding-top: 6%;
+    /* background-color: aliceblue; */
+    color: #0701EB;
+    
+}
+.svg{
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    font-size: 16vw;
+    display: flex;
+    /* height: fit-content; */
+    /* background-color: aqua; */
+    align-items: center;
+}
+
+.h1-hover h1{
+    transform-origin: 0 72%;
+    transition: all linear 0.2s;
+    height: fit-content;
+    font-weight: 900;
+}
+
+.h1-hover:hover h1{
+    transform: scaleY(0.3);
+}
+
+.page1-down{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p1-p1{
+    font-size: 22px;
+    text-align: end;
+    font-weight: 500;
+}
+/* _________ Page 1 start _____________ */
+/* _________ Page 2 start _____________ */
+
+
+.page2{
+    width: 100%;
+    position: relative;
+    padding: 1vmax 4vw;
+    background-color: #0701EB;
+    color: white;
+    font-size: 20px;
+}
+.p2-p1{
+    font-weight: 500;
+    margin-bottom: 1vmax;
+}
+.p1-v1{
+    width: 100%;
+    cursor: pointer;
+}
+
+.play-btn{
+    font-size: 5vmax;
+    width: 10vmax;
+    height: 10vmax;
+    background-color: black;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 5vmax);
+    left: calc(50% - 5vmax);
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.play-btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #E31F16;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    transition: all linear 0.25s;
+}
+.video-div:hover ~ .play-btn::after{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.play-btn:hover::after{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+/* _________ Page 2 end _____________ */
+/* _________ Page 3 start _____________ */
+.page3{
+    width: 100%;
+    padding: 1vmax 4vw;
+}
+
+.p3-p1{
+    font-size: 22px;
+    font-weight: 600;
+    color: #0701EB;
+}
+
+.video-card{
+    width: 100%;
+    height: 70vh;
+    background-color: #E31F16;
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+    margin-bottom: 2vmax;
+}
+
+.vi-di{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all linear 0.6s;
+}
+.btn-div{
+    position: absolute;
+    bottom: 5%;
+    left: 2vmax;
+}
+
+.video-card:hover .vi-di{
+    transform: scale(1.2);
+}
+.btn1{
+    font-size: 2vmax;
+    color: white;
+    background-color: #0701EB;
+    border: none;
+    font-weight: 600;
+    border-radius: 2.3vmax;
+    padding: 1vmax 1.8vmax;
+}
+.btn2{
+    font-size: 2vmax;
+    color: #0701EB;
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 2.3vmax;
+    padding: 1vmax 1.8vmax;
+    margin-left: 10px;
+}
+
+/* _________ Page 3 end _____________ */
+/* _________ Page 4 start _____________ */
+
+
+.page4{
+    width: 100%;
+    height: 100%;
+    padding: 1vmax 4vw;
+}
+
+.p4-h1{
+    font-size: 9vmax;
+    line-height: 9vmax;
+    color: #0701EB;
+    cursor: pointer;
+    font-weight: 700;
+}
+.arrow{
+    transition: all ease-out 0.3s;
+}
+.p4-h1:hover .arrow{
+    margin-left: 1vmax;
+}
+.page4 hr {
+    border-color: #0701EB;
+}
+
+.p4d-up{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #0701EB;
+}
+
+.list-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore-div{
+    display: flex;
+    gap: 2vmax;
+}
+.p4-p1{
+    font-size: 1.2vmax;
+    color: #0701EB;
+}
+.p4-list{
+    list-style-type: none;
+    font-size: 3vmax;
+    line-height: 3.5vmax;
+    font-weight: 700;
+    margin-right: 2vmax;
+}
+
+.p1-hello{
+    font-size: 2vmax;
+    font-weight: 700;
+    text-align: end;
+}
+.a-email{
+    text-decoration: none;
+    color: #0701EB;
+    font-size: 1.2vmax;
+}
+
+.p4d-down{
+    display: flex;
+    height: 50%;
+    justify-content: space-between;
+    align-items: end;
+
+}
+.p4-down{
+width: 100%;
+height: 50%;
+}
+
+.p4-p2{
+    font-size: 1.3vmax;
+    color: #0701EB;
+    font-weight: 600;
+}
+
+.p4-p3{
+    /* height: 100%; */
+    font-size: 5vmax;
+    font-weight: 900;
+    /* text-align: end; */
+    color: #0701EB;
+    /* letter-spacing: -0.3vmax; */
+    transform-origin: bottom;
+    transform: scaleY(2);
+    /* background-color: #E31F16; */
+}
+
+.before-hover{
+    width: fit-content;
+    position: relative;
+}
+.before-hover::before{
+    content: "";
+    width: 0;
+    height: 4%;
+    background-color: #0701EB;
+    transition: all ease-out 0.25s;
+    position: absolute;
+    bottom: 0;
+}
+
+.before-hover:hover::before{
+    width: 100%;
+}
+/* _________ Page 4 end _____________ */
